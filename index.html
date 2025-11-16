@@ -44,9 +44,9 @@
             margin-bottom: 25px;
         }
 
-        /* زر تحميل الكتاب */
         .download-box {
             margin: 18px 0 25px;
+            text-align: center;
         }
 
         .download-btn {
@@ -58,21 +58,25 @@
             font-weight: 700;
             border: none;
             border-radius: 10px;
-            background: #8cc9a1;  /* أخضر فاتح */
             color: white;
             cursor: pointer;
             text-decoration: none;
             transition: 0.3s;
         }
 
-        .download-btn:hover {
-            background: #6db686;
+        /* 🎨 تم تغيير لون زر تحميل الكتاب فقط */
+        .pdf-btn {
+            background: #e8a6a6; /* وردي فاتح */
         }
 
-        /* عناوين الأقسام */
+        .download-btn:hover {
+            opacity: 0.85;
+        }
+
         .section-title {
             font-size: 20px;
             font-weight: 700;
+            background: #0f6934;
             padding: 10px 12px;
             color: #fff;
             border-radius: 10px;
@@ -81,20 +85,12 @@
             text-align: right;
         }
 
-        .video-title {
-            background: #1a854b; /* أخضر أفتح قليلاً */
-        }
-
-        .audio-title {
-            background: #0c2d52; /* أزرق غامق */
-        }
-
         .items-wrapper {
             text-align: right;
         }
 
         .item {
-            background: #d1fae5; /* للفيديوهات */
+            background: #d1fae5;
             padding: 10px 12px;
             margin: 6px 0;
             border-radius: 8px;
@@ -106,22 +102,12 @@
         }
 
         .item.audio {
-            background: #dde6ff; /* للصوتيات */
+            background: #e0e7ff;
         }
 
         .item span.text {
             flex: 1;
             margin-left: 8px;
-        }
-
-        /* الرابط داخل العنصر */
-        .lesson-link {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .lesson-link:hover {
-            text-decoration: underline;
         }
 
         .soon-badge {
@@ -156,100 +142,82 @@
     <!-- صورة الغلاف -->
     <img src="cover.jpg" class="cover" alt="غلاف الكتاب">
 
-    <!-- زر تحميل الكتاب PDF -->
+    <!-- أزرار التحميل -->
     <div class="download-box">
-        <!-- عند توفر الملف، غيّر # إلى رابط PDF الحقيقي -->
-        <a href="#" class="download-btn">📥 تحميل الكتاب PDF</a>
+        <a href="#" class="download-btn pdf-btn">📥 تحميل الكتاب PDF</a>
+        <a href="#" class="download-btn">🎬 تحميل جميع الفيديوهات كملف واحد</a>
+        <a href="#" class="download-btn">🎧 تحميل جميع الصوتيات كملف واحد</a>
     </div>
 
     <!-- المحتوى المرئي -->
-    <div class="section-title video-title">📘 المحتوى المرئي (الفيديوهات)</div>
+    <div class="section-title">📘 المحتوى المرئي (الفيديوهات)</div>
     <div class="items-wrapper">
 
-        <!-- المقدّمة -->
-        <div class="item">
-            <span class="text">
-                <!-- غيّر # إلى رابط المقدمة المرئية عند توفرها -->
-                <a href="#" class="lesson-link">المقدّمة</a>
-            </span>
-            <span class="soon-badge">⏳ قريبًا</span>
-        </div>
+        <div class="item"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
 
-        <!-- الدروس 1–25 (مرئي) -->
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (2): الاستِعاذةُ والبسْملةُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (4): أحكامُ الميمِ السَّاكنةِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (5): الغُنَّةُ وحُرُوفُها</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (6): المُدود</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (7): مَخارِجُ الحُرُوفِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (8): صِفاتُ الحُرُوفِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (10): اللَّاماتُ السَّواكنُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (12): الحُرُوفُ المُقطَّعةِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (13): الألِفاتُ السَّبعةُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (14): التَّفخيمُ والتَّرقيق</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (15): الوَقْفُ والابتداءُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (16): السَّكْتُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (17): الرَّومُ والإشمامُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (18): التقاءُ السَّاكنَينِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (23): فَوائدُ تجويديَّةٌ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (24): لَطائفُ قُرآنيَّةٌ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item"><span class="text"><a href="#" class="lesson-link">مشاهدة الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (2): الاستِعاذةُ والبسْملةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (4): أحكامُ الميمِ السَّاكنةِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (5): الغُنَّةُ وحُرُوفُها</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (6): المُدود</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (7): مَخارِجُ الحُرُوفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (8): صِفاتُ الحُرُوفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (10): اللَّاماتُ السَّواكنُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (12): الحُرُوفُ المُقطَّعةِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (13): الألِفاتُ السَّبعةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (14): التَّفخيمُ والتَّرقيق</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (15): الوَقْفُ والابتداءُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (16): السَّكْتُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (17): الرَّومُ والإشمامُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (18): التقاءُ السَّاكنَينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (23): فَوائدُ تجويديَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (24): لَطائفُ قُرآنيَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item"><span class="text">مشاهدة الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
 
-        <!-- زر في آخر قسم الفيديوهات -->
-        <a href="#" class="download-btn" style="background:#b08567;">🎬 تحميل جميع الفيديوهات كملف واحد</a>
     </div>
 
     <!-- المحتوى الصوتي -->
-    <div class="section-title audio-title">🎧 المحتوى الصوتي (التسجيلات)</div>
+    <div class="section-title">🎧 المحتوى الصوتي (التسجيلات)</div>
     <div class="items-wrapper">
+        
+        <div class="item audio"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
 
-        <!-- المقدّمة -->
-        <div class="item audio">
-            <span class="text">
-                <!-- غيّر # إلى رابط المقدمة الصوتية عند توفرها -->
-                <a href="#" class="lesson-link">المقدّمة</a>
-            </span>
-            <span class="soon-badge">⏳ قريبًا</span>
-        </div>
+        <div class="item audio"><span class="text">استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (2): الاستِعاذةُ والبسْملةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (4): أحكامُ الميمِ السَّاكنةِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (5): الغُنَّةُ وحُرُوفُها</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (6): المُدود</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (7): مَخارِجُ الحُرُوفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (8): صِفاتُ الحُرُوفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (10): اللَّاماتُ السَّواكنُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (12): الحُرُوفُ المُقطَّعةِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (13): الألِفاتُ السَّبعةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (14): التَّفخيمُ والتَّرقيق</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (15): الوَقْفُ والابتداءُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (16): السَّكْتُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (17): الرَّومُ والإشمامُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (18): التقاءُ السَّاكنَينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (23): فَوائدُ تجويديَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (24): لَطائفُ قُرآنيَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
 
-        <!-- الدروس 1–25 (صوتي) -->
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (2): الاستِعاذةُ والبسْملةُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (4): أحكامُ الميمِ السَّاكنةِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (5): الغُنَّةُ وحُرُوفُها</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (6): المُدود</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (7): مَخارِجُ الحُرُوفِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (8): صِفاتُ الحُرُوفِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (10): اللَّاماتُ السَّواكنُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (12): الحُرُوفُ المُقطَّعةِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (13): الألِفاتُ السَّبعةُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (14): التَّفخيمُ والتَّرقيق</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (15): الوَقْفُ والابتداءُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (16): السَّكْتُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (17): الرَّومُ والإشمامُ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (18): التقاءُ السَّاكنَينِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (23): فَوائدُ تجويديَّةٌ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (24): لَطائفُ قُرآنيَّةٌ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text"><a href="#" class="lesson-link">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</a></span><span class="soon-badge">⏳ قريبًا</span></div>
-
-        <!-- زر في آخر قسم الصوتيات -->
-        <a href="#" class="download-btn" style="background:#b59fc0;">🎧 تحميل جميع الصوتيات كملف واحد</a>
     </div>
 
+    <!-- حقوق النشر -->
     <div class="copyright">
         📌 يُسمح بالنسخ والمشاركة والنشر دون قيود.
     </div>
