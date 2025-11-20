@@ -30,7 +30,7 @@
             font-family: "Amiri", "Cairo", serif;
             color: #0b4d27; /* أخضر أنيق */
             margin-bottom: 10px;
-            font-size: 24px; /* تصغير درجة واحدة */
+            font-size: 24px; /* أصغر بدرجة من 27px */
             font-weight: 900;
             letter-spacing: 0.5px;
         }
@@ -87,7 +87,7 @@
         }
 
         .section-title.video {
-            background: #0f7b3a; /* أخضر موحد للفيديو */
+            background: #0f7b3a; /* أخضر موحّد للفيديو */
         }
 
         .section-title.audio {
@@ -108,12 +108,12 @@
             align-items: center;
             font-size: 15px;
             font-weight: 600;
-            border-right: 4px solid #16a34a; /* شريط أخضر بسيط من اليمين */
+            border-right: 4px solid #16a34a; /* شريط أخضر من اليمين */
             transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
         }
 
         .item.audio {
-            background: #dde7ff; /* للصوتيات أزرق فاتح موحد */
+            background: #dde7ff; /* للصوتيات: أزرق فاتح */
             border-right-color: #2563eb; /* شريط أزرق للصوتيات */
         }
 
@@ -141,7 +141,7 @@
             background-color: #c7d8ff; /* أزرق أهدأ قليلاً للصوتيات */
         }
 
-        /* أزرار تحميل جميع الفيديوهات والصوتيات */
+        /* أزرار تحميل جميع الفيديوهات/الصوتيات */
         .bulk-download-btn {
             display: block;
             width: 95%;
@@ -150,16 +150,17 @@
             font-size: 17px;
             font-weight: 800;
             border-radius: 10px;
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             transition: 0.25s;
         }
 
-        .bulk-download-btn.video { background: #15803d; }
+        .bulk-download-btn.video {
+            background: #15803d;
+        }
 
-        /* اللون السماوي الأغمق للصوتيات */
         .bulk-download-btn.audio {
-            background: #6b8ce9;
+            background: #6b8ce9; /* سماوي أغمق قليلاً من خلفية الصوتيات */
         }
 
         .bulk-download-btn:hover {
@@ -187,9 +188,9 @@
         }
 
         .share-title {
-            font-size: 17px; /* أكبر بدرجة */
+            font-size: 17px;     /* أكبر بدرجة من 15 */
             font-weight: 800;
-            color: #c51033; /* أغمق قليلاً */
+            color: #c51033;      /* أغمق قليلاً */
             margin-bottom: 10px;
         }
 
@@ -293,8 +294,8 @@
     <div class="section-title video">📘 المحتوى المرئي (الفيديوهات)</div>
     <div class="items-wrapper">
 
-        <!-- جميع دروس الفيديو -->
         <div class="item"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
+
         <div class="item"><span class="text">مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item"><span class="text">مشاهدة الدرس (2): الاستِعاذةُ والبسْملةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item"><span class="text">مشاهدة الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
@@ -330,8 +331,8 @@
     <div class="section-title audio">🎧 المحتوى الصوتي (التسجيلات)</div>
     <div class="items-wrapper">
 
-        <!-- جميع دروس الصوتيات -->
         <div class="item audio"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
+
         <div class="item audio"><span class="text">استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (2): الاستِعاذةُ والبسْملةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
@@ -368,7 +369,7 @@
     </div>
 
     <div class="share-area">
-        <div class="share-title">شارك الكتاب مع الأحبة</div>
+        <div class="share-title">شارك الكتاب مع الأحبّة</div>
 
         <div class="share-buttons">
 
@@ -376,7 +377,8 @@
                 <a class="share-btn whatsapp"
                    href="https://wa.me/?text=https://eyada1977.github.io"
                    target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="share-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                         class="share-icon">
                 </a>
                 <div class="share-label">واتساب</div>
             </div>
@@ -385,7 +387,8 @@
                 <a class="share-btn telegram"
                    href="https://t.me/share/url?url=https://eyada1977.github.io"
                    target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" class="share-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
+                         class="share-icon">
                 </a>
                 <div class="share-label">تيلغرام</div>
             </div>
@@ -394,7 +397,8 @@
                 <a class="share-btn facebook"
                    href="https://www.facebook.com/sharer/sharer.php?u=https://eyada1977.github.io"
                    target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="share-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                         class="share-icon">
                 </a>
                 <div class="share-label">فيسبوك</div>
             </div>
