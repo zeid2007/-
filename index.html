@@ -2,18 +2,24 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-
-    <!-- نجعل العنوان فارغًا حتى لا يظهر نص في معاينة واتساب -->
-    <title> </title>
-
+    <title>دليل أحكام التجويد</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- معاينة منصات التواصل: صورة الغلاف فقط -->
+    <!-- وسوم المشاركة الاجتماعية: صورة غلاف الكتاب -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
-    <meta property="og:image" content="https://altajwid.github.io/cover.jpg?v=2">
+    <meta property="og:title" content="دليل أحكام التجويد">
+    <meta property="og:url" content="https://altajwid.github.io">
+    <meta property="og:image" content="https://altajwid.github.io/cover.jpg?v=3">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="غلاف كتاب دليل أحكام التجويد">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://altajwid.github.io/cover.jpg?v=2">
+    <meta name="twitter:title" content="دليل أحكام التجويد">
+    <meta name="twitter:image" content="https://altajwid.github.io/cover.jpg?v=3">
 
     <style>
         body {
@@ -135,10 +141,7 @@
         }
 
         .bulk-download-btn.video { background: #15803d; }
-
-        .bulk-download-btn.audio {
-            background: #6b8ce9;
-        }
+        .bulk-download-btn.audio { background: #6b8ce9; }
 
         .bulk-download-btn:hover {
             transform: translateY(-2px);
@@ -172,7 +175,7 @@
         .share-buttons {
             display: flex;
             justify-content: center;
-            gap: 10px; /* تقليل المسافة ليظهروا في سطر واحد بالجوال */
+            gap: 10px; /* مسافة صغيرة ليظهروا في سطر واحد بالجوال */
             flex-wrap: wrap;
         }
 
@@ -243,7 +246,7 @@
 
         #backToTop:hover {
             transform: translateY(-3px);
-            background: #0a401f;
+            background: #0a401ف;
         }
 
         #backToTop.show {
@@ -260,7 +263,7 @@
     <h1>المحتوى المرئي والصوتي للكتاب</h1>
     <div class="subtitle">سيتم تفعيل الروابط لاحقًا بإذن الله.</div>
 
-    <img src="cover.jpg" class="cover" alt="غلاف الكتاب">
+    <img src="cover.jpg" class="cover" alt="غلاف كتاب دليل أحكام التجويد">
 
     <div class="download-main-wrapper">
         <a href="#" class="download-main-btn">📥 تحميل الكتاب PDF</a>
@@ -269,8 +272,6 @@
     <!-- المحتوى المرئي -->
     <div class="section-title video">📘 المحتوى المرئي (الفيديوهات)</div>
     <div class="items-wrapper">
-
-        <!-- جميع دروس الفيديو -->
         <div class="item"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item"><span class="text">مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item"><span class="text">مشاهدة الدرس (2): الاستِعاذةُ والبسْملةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
@@ -306,8 +307,6 @@
     <!-- المحتوى الصوتي -->
     <div class="section-title audio">🎧 المحتوى الصوتي (التسجيلات)</div>
     <div class="items-wrapper">
-
-        <!-- جميع دروس الصوتيات -->
         <div class="item audio"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (2): الاستِعاذةُ والبسْملةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
@@ -404,15 +403,9 @@
 
     // زر العودة للأعلى
     const btn = document.getElementById("backToTop");
-
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 250) {
-            btn.classList.add("show");
-        } else {
-            btn.classList.remove("show");
-        }
+        btn.classList.toggle("show", window.scrollY > 250);
     });
-
     btn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
