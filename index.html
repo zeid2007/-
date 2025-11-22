@@ -10,14 +10,17 @@
     <meta property="og:locale" content="ar_AR">
 
     <meta property="og:title" content="كتاب دليل أحكام التجويد (المحتوى المرئي والصوتي – تحميل ومشاهدة واستماع)">
-    <meta property="og:url" content="https://eyada1977.github.io">
-    <meta property="og:image" content="https://eyada1977.github.io/mushaf.jpg">
-    <meta property="og:image:alt" content="صورة المصحف الشريف">
+    <meta property="og:url" content="https://altajwid.github.io">
+    <meta property="og:image" content="https://altajwid.github.io/mushaf.jpg.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="كتاب دليل أحكام التجويد">
 
     <!-- وسوم Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="كتاب دليل أحكام التجويد (المحتوى المرئي والصوتي – تحميل ومشاهدة واستماع)">
-    <meta name="twitter:image" content="https://eyada1977.github.io/mushaf.jpg">
+    <meta name="twitter:image" content="https://altajwid.github.io/mushaf.jpg.jpg">
 
     <style>
         body {
@@ -222,6 +225,7 @@
         .whatsapp { background: #25D366; }
         .telegram { background: #0088cc; }
         .facebook { background: #1877F2; }
+        .twitter { background: #000000; }
 
         /* زر العودة للأعلى */
         #backToTop {
@@ -354,30 +358,31 @@
         <div class="share-buttons">
 
             <div class="share-item">
-                <a class="share-btn whatsapp"
-                   href="https://wa.me/?text=https://eyada1977.github.io"
-                   target="_blank">
+                <a class="share-btn whatsapp" id="share-whatsapp" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="share-icon">
                 </a>
                 <div class="share-label">واتساب</div>
             </div>
 
             <div class="share-item">
-                <a class="share-btn telegram"
-                   href="https://t.me/share/url?url=https://eyada1977.github.io"
-                   target="_blank">
+                <a class="share-btn telegram" id="share-telegram" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" class="share-icon">
                 </a>
                 <div class="share-label">تيلغرام</div>
             </div>
 
             <div class="share-item">
-                <a class="share-btn facebook"
-                   href="https://www.facebook.com/sharer/sharer.php?u=https://eyada1977.github.io"
-                   target="_blank">
+                <a class="share-btn facebook" id="share-facebook" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="share-icon">
                 </a>
                 <div class="share-label">فيسبوك</div>
+            </div>
+
+            <div class="share-item">
+                <a class="share-btn twitter" id="share-twitter" href="#" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" class="share-icon">
+                </a>
+                <div class="share-label">تويتر</div>
             </div>
 
         </div>
@@ -389,16 +394,30 @@
 <div id="backToTop">⬆️</div>
 
 <script>
+    const currentURL = window.location.href;
+    const shareText = "كتاب (دليل أحكام التجويد) – " + currentURL;
+
+    // WhatsApp
+    document.getElementById("share-whatsapp").href =
+        `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+
+    // Telegram
+    document.getElementById("share-telegram").href =
+        `https://t.me/share/url?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent("كتاب (دليل أحكام التجويد)")}`;
+
+    // Facebook
+    document.getElementById("share-facebook").href =
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentURL)}&quote=${encodeURIComponent("كتاب (دليل أحكام التجويد)")}`;
+
+    // Twitter (X)
+    document.getElementById("share-twitter").href =
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+
+    // زر العودة للأعلى
     const btn = document.getElementById("backToTop");
-
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 250) {
-            btn.classList.add("show");
-        } else {
-            btn.classList.remove("show");
-        }
+        btn.classList.toggle("show", window.scrollY > 250);
     });
-
     btn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
